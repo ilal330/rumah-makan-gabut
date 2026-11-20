@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rumah makan gabut</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<style>
+body {
+    background: #fffaf3;
+    font-family: Arial, sans-serif;
+}
+.navbar, footer {
+    background: #422b20;
+}
+.hero {
+    background: linear-gradient(#0008,#0008),
+    url('https://images.unsplash.com/photo-1445116572660-236099ec97a0?w=1500');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 120px 20px;
+}
+.judul {
+    color: #70452d;
+    font-weight: bold;
+}
+.card {
+    border: none;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: .3s;
+}
+.card:hover {
+    transform: translateY(-5px);
+}
+.card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+.harga {
+    color: green;
+    font-weight: bold;
+}
+.btn-cafe {
+    background: #70452d;
+    color: white;
+}
+.btn-cafe:hover {
+    background: #422b20;
+    color: white;
+}
+footer {
+    color: white;
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+<div class="container">
+<a class="navbar-brand fw-bold" href="#">🍱 rumah makan</a>
+
+<button class="navbar-toggler" type="button"
+data-bs-toggle="collapse" data-bs-target="#navbar">
+<span class="navbar-toggler-icon"></span>
+</button>
+
+<div class="collapse navbar-collapse" id="navbar">
+<ul class="navbar-nav ms-auto">
+<li class="nav-item"><a class="nav-link" href="#beranda">Beranda</a></li>
+<li class="nav-item"><a class="nav-link" href="#menu">Menu</a></li>
+<li class="nav-item"><a class="nav-link" href="#reservasi">Reservasi</a></li>
+</ul>
+</div>
+</div>
+</nav>
+
+<!-- BERANDA -->
+<section class="hero" id="beranda">
+<div class="container">
+<h1 class="display-4 fw-bold">Selamat Datang di rumah makan gabut</h1>
+<p class="lead">Nikmati makanan lezat dan minuman segar bersama kami.</p>
+<a href="#menu" class="btn btn-warning fw-bold">Lihat Menu</a>
+</div>
+</section>
+
+<!-- MENU -->
+<section class="py-5" id="menu">
+<div class="container">
+
+<div class="text-center mb-5">
+<h2 class="judul">Menu Favorit Kami</h2>
+<p class="text-muted">Pilihan makanan dan minuman terbaik.</p>
+</div>
+
+<!-- MINUMAN -->
+<h3 class="judul mb-4">🥤 Menu Minuman</h3>
+
+<div class="row g-4 mb-5">
+
+<div class="col-12 col-md-4">
+<div class="card shadow h-100">
+<img src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?w=600" alt="Es Kopi Susu">
+<div class="card-body">
+<h5 class="fw-bold">Es Kopi Susu Gula Aren</h5>
+<p class="text-muted">Kopi espresso, susu segar, dan gula aren.</p>
+<div class="d-flex justify-content-between">
+<span class="harga">Rp 20.000</span>
+<button class="btn btn-cafe btn-sm" onclick="pesan('Es Kopi Susu Gula Aren')">Pesan</button>
+</div>
+</div>
+</div>
+</div>
+
+<div class="col-12 col-md-4">
+<div class="card shadow h-100">
+<img src="https://images.unsplash.com/photo-1525385133512-2f3bdd039054?w=600" alt="Jus Alpukat">
+<div class="card-body">
+<h5 class="fw-bold">Jus Alpukat</h5>
+<p class="text-muted">Jus alpukat segar dengan tambahan cokelat.</p>
+<div class="d-flex justify-content-between">
+<span class="harga">Rp 18.000</span>
+<button class="btn btn-cafe btn-sm" onclick="pesan('Jus Alpukat')">Pesan</button>
+</div>
+</div>
+</div>
+</div>
+
+<div class="col-12 col-md-4">
+<div class="card shadow h-100">
+<img src="https://images.unsplash.com/photo-1556679343-c7306c1976bc?w=600" alt="Strawberry Yakult">
+<div class="card-body">
+<h5 class="fw-bold">Strawberry Yakult</h5>
+<p class="text-muted">Perpaduan stroberi segar dan minuman fermentasi.</p>
+<div class="d-flex justify-content-between">
+<span class="harga">Rp 17.000</span>
+<button class="btn btn-cafe btn-sm" onclick="pesan('Strawberry Yakult')">Pesan</button>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+
+<!-- MAKANAN -->
+<h3 class="judul mb-4">🍽️ Menu Makanan</h3>
+
+<div class="row g-4">
+
+<div class="col-12 col-md-4">
+<div class="card shadow h-100">
+<img src="https://images.unsplash.com/photo-1544025162-d76694265947?w=600" alt="Ayam Bakar Madu">
+<div class="card-body">
+<h5 class="fw-bold">Ayam Bakar Madu</h5>
+<p class="text-muted">Ayam bakar dengan bumbu rempah dan olesan madu.</p>
+<div class="d-flex justify-content-between">
+<span class="harga">Rp 32.000</span>
+<button class="btn btn-cafe btn-sm" onclick="pesan('Ayam Bakar Madu')">Pesan</button>
+</div>
+</div>
+</div>
+</div>
+
+<div class="col-12 col-md-4">
+<div class="card shadow h-100">
+<img src="https://images.unsplash.com/photo-1551183053-bf91a1d81141?w=600" alt="Spaghetti Bolognese">
+<div class="card-body">
+<h5 class="fw-bold">Spaghetti Bolognese</h5>
+<p class="text-muted">Pasta dengan saus tomat dan daging cincang.</p>
+<div class="d-flex justify-content-between">
+<span class="harga">Rp 30.000</span>
+<button class="btn btn-cafe btn-sm" onclick="pesan('Spaghetti Bolognese')">Pesan</button>
+</div>
+</div>
+</div>
+</div>
+
+<div class="col-12 col-md-4">
+<div class="card shadow h-100">
+<img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=600" alt="Beef Burger">
+<div class="card-body">
+<h5 class="fw-bold">Beef Burger</h5>
+<p class="text-muted">Burger daging sapi, keju, selada, dan saus spesial.</p>
+<div class="d-flex justify-content-between">
+<span class="harga">Rp 35.000</span>
+<button class="btn btn-cafe btn-sm" onclick="pesan('Beef Burger')">Pesan</button>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+</section>
+
+<!-- RESERVASI -->
+<section class="py-5 bg-light" id="reservasi">
+<div class="container">
+<div class="row justify-content-center">
+<div class="col-md-7">
+<div class="card shadow p-4">
+
+<h2 class="judul text-center mb-4">Reservasi Meja</h2>
+
+<form onsubmit="reservasi(event)">
+<div class="mb-3">
+<label class="form-label">Nama Lengkap</label>
+<input type="text" id="nama" class="form-control" required>
+</div>
+
+<div class="mb-3">
+<label class="form-label">Email</label>
+<input type="email" class="form-control" required>
+</div>
+
+<div class="row mb-3">
+<div class="col-6">
+<label class="form-label">Tanggal</label>
+<input type="date" class="form-control" required>
+</div>
+
+<div class="col-6">
+<label class="form-label">Jumlah Orang</label>
+<input type="number" min="1" class="form-control" required>
+</div>
+</div>
+
+<div class="mb-3">
+<label class="form-label">Catatan</label>
+<textarea class="form-control" rows="3"></textarea>
+</div>
+
+<button type="submit" class="btn btn-cafe w-100">Kirim Reservasi</button>
+</form>
+
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- FOOTER -->
+<footer class="text-center py-4">
+<h5 class="fw-bold">☕ Aroma Kopi</h5>
+<p>Tempat terbaik untuk menikmati makanan dan minuman.</p>
+<small>&copy; 2026 Aroma Kopi - XI RPL. All Rights Reserved.</small>
+</footer>
+
+<!-- JAVASCRIPT -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+function pesan(menu) {
+    alert("Anda memilih menu " + menu);
+}
+
+function reservasi(event) {
+    event.preventDefault();
+    let nama = document.getElementById("nama").value;
+    alert("Terima kasih " + nama + ", reservasi berhasil dikirim!");
+    event.target.reset();
+}
+</script>
+
+</body>
+</html>
